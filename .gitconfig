@@ -1,0 +1,11 @@
+[user]
+	email = edward93@gmail.com
+	name = stolmen
+[core]
+	editor = vi
+[alias]
+	s = status
+	p = push
+	u = pull
+	co = checkout
+  c = commit
