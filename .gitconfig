@@ -9,3 +9,6 @@
 	u = pull
 	co = checkout
   c = commit
+[push]
+  autoSetupRemote = true
+
