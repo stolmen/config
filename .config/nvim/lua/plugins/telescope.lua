@@ -4,6 +4,8 @@ local find_files_with_hidden_and_no_ignore = function()
   LazyVim.pick("find_files", { no_ignore = true, hidden = true, default_text = line })()
 end
 
+local actions = require("telescope.actions")
+
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -28,10 +30,12 @@ return {
         mappings = {
           i = {
             ["<a-h>"] = find_files_with_hidden_and_no_ignore,
+            ["<C-j>"] = find_files_with_hidden_and_no_ignore,
+            ["<S-Down>"] = actions.cycle_history_next,
+            ["<S-Up>"] = actions.cycle_history_prev,
           },
         },
       },
-      -- your config
     })
 
     -- then load the extension
