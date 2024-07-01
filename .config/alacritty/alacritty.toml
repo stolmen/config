@@ -1,0 +1,13 @@
+[window]
+opacity = 0.8
+startup_mode = "Windowed"
+blur = true
+padding = {x=3,y=3}
+
+[scrolling]
+history = 50000
+multiplier= 5
+
+[font]
+normal = {family = "ComicShannsMono Nerd Font", style = "Regular"}
+
