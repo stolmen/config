@@ -3,7 +3,7 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
-      -- transparent_mode = true,
+      transparent_mode = false,
     },
   },
   -- Configure LazyVim to load gruvbox
