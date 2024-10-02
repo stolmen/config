@@ -1,0 +1,77 @@
+-- function dump(o)
+--   if type(o) == "table" then
+--     local s = "{ "
+--     for k, v in pairs(o) do
+--       if type(k) ~= "number" then
+--         k = '"' .. k .. '"'
+--       end
+--       s = s .. "[" .. k .. "] = " .. dump(v) .. ","
+--     end
+--     return s .. "} "
+--   else
+--     return tostring(o)
+--   end
+-- end
+--
+-- local get_running_linter = function()
+--   local table = require("conform").formatters_by_ft
+--   -- print(dump(table))
+--   -- print("hmm")
+--   print(table.python)
+--   return table
+-- end
+--
+-- vim.keymap.set("n", "<leader>fa", get_running_linter, { desc = "keymap playaround", expr = true })
+
+-- return {
+--
+--   {
+--     -- modify the linter used by the markdown module to ignore certain things
+--     "nvim-lspconfig",
+--         config=function()
+--             require('lspconfig').ruff.setup{
+--                 settings ={
+--                     ruff ={
+--                         line_length=120
+--                     },
+--                 }
+--             }
+--         end
+--     opts = {
+--       servers = {
+--         ruff = {
+--           init_options = { settings = { line_length = 120 } },
+--           -- gc"black",
+--           -- "proselint", -- also run this pretentious linter for the lols
+--         },
+--       },
+--       -- linters = {
+--       --   markdownlint = function()
+--       --     local filename = vim.api.nvim_buf_get_name(0) --note `0` means the current buffer.
+--       --     local efm = "%f:%l:%c %m,%f:%l %m"
+--       --     return {
+--       --       cmd = "markdownlint",
+--       --       ignore_exitcode = true,
+--       --       stream = "stderr",
+--       --       stdin = false, -- pass the filename as an argument
+--       --       append_fname = false, -- this doesn't work as expected - I need to form the arguments manually
+--       --       args = { filename, "--disable", "MD013" },
+--       --       parser = require("lint.parser").from_errorformat(efm, {
+--       --         source = "markdownlint",
+--       --         severity = vim.diagnostic.severity.WARN,
+--       --       }),
+--       --     }
+--       --   end,
+--       -- },
+--     },
+--   },
+--   -- add any tools you want to have installed below
+--   -- {
+--   --   "williamboman/mason.nvim",
+--   --   opts = {
+--   --     ensure_installed = {
+--   --       "black",
+--   --     },
+--   --   },
+--   -- },
+-- }

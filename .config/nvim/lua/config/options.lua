@@ -4,3 +4,5 @@
 vim.opt.winbar = "%=%m %f" -- wtf is going on here and where is the docuemtnation for the interface at the `vim` namespace?
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.scrolloff = 99
+-- vim.opt.textwidth = 120

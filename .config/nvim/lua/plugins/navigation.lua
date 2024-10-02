@@ -6,6 +6,18 @@ end
 
 local actions = require("telescope.actions")
 
+-- local function find_files_hack()
+--   return {
+--     "rg",
+--     "--files",
+--     "--color",
+--     "never",
+--     "-g",
+--     "!.git",
+--     -- "-g", "**/*.env*", "--hidden"
+--   }
+-- end
+
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -32,6 +44,10 @@ return {
         version = "^1.0.0",
       },
     },
+    -- keys = {
+    --   { "<leader>fd", LazyVim.pick("find_files"), desc = "Find Files (Root Dir hack)" },
+    -- },
+
     config = function()
       local telescope = require("telescope")
 
@@ -52,6 +68,12 @@ return {
             },
           },
         },
+        -- pickers = {
+        --   find_files = {
+        --     find_command = find_files_hack,
+        --     -- hidden = true,
+        --   },
+        -- },
       })
 
       -- then load the extension
@@ -63,6 +85,26 @@ return {
         "<leader>fz",
         "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
         { desc = "Grep w/ options (Root Dir)" }
+      )
+
+      -- local telescope = require("telescope.builtin")
+
+      -- Create a custom function to find .env files
+      function find_env_files_uniquelalala()
+        local builtin = require("telescope.builtin")
+        builtin.find_files({
+          prompt_title = "< .env Files >",
+          cwd = vim.fn.expand("%:p:h"), -- Start from the current directory
+          find_command = { "rg", "--files", "--glob", "**/*.env*", "--hidden", "--no-ignore" },
+        })
+      end
+
+      -- Map the custom function to a key
+      vim.api.nvim_set_keymap(
+        "n",
+        "<leader>fd",
+        "<cmd>lua find_env_files_uniquelalala()<CR>",
+        { noremap = true, silent = true }
       )
     end,
   },
