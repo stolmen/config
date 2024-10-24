@@ -94,7 +94,9 @@ return {
         local builtin = require("telescope.builtin")
         builtin.find_files({
           prompt_title = "< .env Files >",
-          cwd = vim.fn.expand("%:p:h"), -- Start from the current directory
+          -- cwd = "~/development-environment/backend_dir/",
+          cwd = vim.loop.cwd(),
+          -- cwd = vim.fn.expand("%:p:h"), -- Start from the current directory
           find_command = { "rg", "--files", "--glob", "**/*.env*", "--hidden", "--no-ignore" },
         })
       end
