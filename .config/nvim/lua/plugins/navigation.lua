@@ -90,7 +90,7 @@ return {
       -- local telescope = require("telescope.builtin")
 
       -- Create a custom function to find .env files
-      function find_env_files_uniquelalala()
+      function find_env_files()
         local builtin = require("telescope.builtin")
         builtin.find_files({
           prompt_title = "< .env Files >",
@@ -102,12 +102,7 @@ return {
       end
 
       -- Map the custom function to a key
-      vim.api.nvim_set_keymap(
-        "n",
-        "<leader>fd",
-        "<cmd>lua find_env_files_uniquelalala()<CR>",
-        { noremap = true, silent = true }
-      )
+      vim.api.nvim_set_keymap("n", "<leader>fd", "<cmd>lua find_env_files()<CR>", { noremap = true, silent = true })
     end,
   },
 }

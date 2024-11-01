@@ -2205,6 +2205,9 @@ os.environ["QT_SCALE_FACTOR_ROUNDING_POLICY"] = "RoundPreferFloor"
 # c.zoom.text_only = False
 
 ## Bindings for normal mode
+# TODO: think of a better keybind...
+config.bind("ge", "spawn --userscript ~/anki_playaround/run.sh")
+
 # config.bind("'", 'mode-enter jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
