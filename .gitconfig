@@ -8,7 +8,15 @@
 	p = push
 	u = pull
 	co = checkout
-  c = commit
+    c = commit
 [push]
-  autoSetupRemote = true
+    autoSetupRemote = true
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[blame]
+    ignoreRevsFile = .git-blame-ignore-revs-file
