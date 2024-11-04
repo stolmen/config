@@ -9,6 +9,12 @@ history = 50000
 multiplier= 5
 
 [font]
-# normal = {family = "ComicShannsMono Nerd Font", style = "Regular"}
-normal = {family = "SauceCodePro NFM", style = "Regular"}
+
+# linux
+# normal = {family = "SauceCodePro NFM", style = "Regular"}
+
+# macos
+normal = {family = "SauceCodePro Nerd Font", style = "Medium"}
+
+size = 15
 
