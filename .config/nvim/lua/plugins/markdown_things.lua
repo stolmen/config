@@ -35,6 +35,7 @@ return {
     opts = {
       ensure_installed = {
         "proselint",
+        "markdownlint",
       },
     },
   },
