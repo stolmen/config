@@ -2,7 +2,7 @@
 	email = edward93@gmail.com
 	name = stolmen
 [core]
-	editor = vi
+	editor = nvim
 [alias]
 	s = status
 	p = push
