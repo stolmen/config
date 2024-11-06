@@ -9,6 +9,7 @@
 	u = pull
 	co = checkout
     c = commit
+    du = ! git checkout master && git pull
 [push]
     autoSetupRemote = true
 
