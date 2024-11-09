@@ -6,3 +6,4 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 99
 -- vim.opt.textwidth = 120
+vim.opt.mouse:append("a")
