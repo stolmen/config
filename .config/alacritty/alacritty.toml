@@ -5,7 +5,7 @@ blur = true
 padding = {x=3, y=3}
 
 [scrolling]
-history = 50000
+history = 100000
 multiplier= 5
 
 [font]
