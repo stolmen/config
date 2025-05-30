@@ -1,3 +1,4 @@
+-- credit: https://github.com/jellydn/lazy-nvim-ide/blob/main/lua/plugins/extras/copilot-chat-v2.lua
 local IS_DEV = false
 
 local prompts = {
