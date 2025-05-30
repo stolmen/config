@@ -1,0 +1,52 @@
+return {}
+-- return {
+--   -- Install GitHub Copilot
+--   {
+--     "github/copilot.vim",
+--     config = function()
+--       -- Enable Copilot
+--       vim.g.copilot_no_tab_map = true
+--       vim.api.nvim_set_keymap("i", "<C-X>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+--     end,
+--   },
+--
+--   -- Install nvim-cmp and dependencies
+--   {
+--     "hrsh7th/nvim-cmp",
+--     dependencies = {
+--       "hrsh7th/cmp-buffer", -- Buffer completions
+--       "hrsh7th/cmp-path", -- Path completions
+--       "hrsh7th/cmp-nvim-lsp", -- LSP completions
+--       "zbirenbaum/copilot-cmp", -- Copilot completions
+--     },
+--     config = function()
+--       local cmp = require("cmp")
+--       local copilot_cmp = require("copilot_cmp")
+--
+--       -- Setup nvim-cmp
+--       cmp.setup({
+--         snippet = {
+--           expand = function(args)
+--             vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+--           end,
+--         },
+--         mapping = {
+--           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+--           ["<C-f>"] = cmp.mapping.scroll_docs(4),
+--           ["<C-Space>"] = cmp.mapping.complete(),
+--           ["<C-e>"] = cmp.mapping.close(),
+--           ["<CR>"] = cmp.mapping.confirm({ select = true }),
+--         },
+--         sources = cmp.config.sources({
+--           { name = "copilot" }, -- Add Copilot as the first completion source
+--           { name = "nvim_lsp" },
+--           { name = "buffer" },
+--           { name = "path" },
+--         }),
+--       })
+--
+--       -- Configure copilot-cmp
+--       copilot_cmp.setup()
+--     end,
+--   },
+-- }

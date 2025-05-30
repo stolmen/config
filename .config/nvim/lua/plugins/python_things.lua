@@ -76,5 +76,5 @@
 --   -- },
 -- }
 --
---
+vim.g.conjure_client_python_stdio_command = { "poetry", "run", "python", "-iq" }
 return {}
