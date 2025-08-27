@@ -76,5 +76,10 @@
 --   -- },
 -- }
 --
-vim.g.conjure_client_python_stdio_command = { "poetry", "run", "python", "-iq" }
-return {}
+-- vim.g.conjure_client_python_stdio_command = { "poetry", "run", "python", "-iq" }
+-- lua/plugins/python_things.lua
+return {
+  require("lspconfig").pyright.setup({
+    cmd = { "pyright-langserver", "--stdio" }, -- uses system `which pyright-langserver`
+  }),
+}

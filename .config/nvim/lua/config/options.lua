@@ -8,4 +8,4 @@ vim.opt.scrolloff = 99
 -- vim.opt.textwidth = 120
 vim.opt.mouse:append("a")
 
-vim.g.conjure_client_python_stdio_command = { "poetry", "run", "python", "-iq" }
+-- vim.g.conjure_client_python_stdio_command = { "poetry", "run", "python", "-iq" }

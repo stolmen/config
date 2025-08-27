@@ -1,3 +1,4 @@
+-- return {}
 -- credit: https://github.com/jellydn/lazy-nvim-ide/blob/main/lua/plugins/extras/copilot-chat-v2.lua
 local IS_DEV = false
 
@@ -21,7 +22,8 @@ local prompts = {
 }
 
 return {
-  { import = "plugins.extras.copilot-vim" }, -- Or use { import = "lazyvim.plugins.extras.coding.copilot" },
+  -- { import = "plugins.extras.copilot-vim" },
+  -- Or use { import = "lazyvim.plugins.extras.coding.copilot" },
   {
     "folke/which-key.nvim",
     optional = true,
